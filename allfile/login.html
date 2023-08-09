@@ -31,7 +31,7 @@
     </div>
     <div class="registration form">
       <header>Signup</header>
-      <form action="http://localhost:5000/signup" method="POST" enctype="multipart/form-data" id="signup-form">
+      <form action="https://cattle-shop.onrender.com/signup" method="POST" enctype="multipart/form-data" id="signup-form">
         <input type="email" name="email" placeholder="Enter your email">
         <input type="password" name="password" placeholder="Create a password">
         <button type="submit">Submit</button>
@@ -49,7 +49,7 @@
       const formData = new URLSearchParams(new FormData(event.target));
       console.log(formData)
       const email = formData.get('email');
-      axios.post('http://localhost:5000/login', formData)
+      axios.post('https://cattle-shop.onrender.com/login', formData)
         .then(res => {
           if (res.data === "exist") {
             if(email==="jidancf@gmail.com" || email==="kawser@gmail.com"){
@@ -69,7 +69,7 @@
     document.getElementById("signup-form").addEventListener("submit", function (event) {
       event.preventDefault();
       const formData = new URLSearchParams(new FormData(event.target));
-      axios.post('http://localhost:5000/signup', formData)
+      axios.post('https://cattle-shop.onrender.com/signup', formData)
         .then(response => {
           alert("done");
         })

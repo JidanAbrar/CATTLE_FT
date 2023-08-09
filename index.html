@@ -146,7 +146,7 @@
         var data;
         async function fetchData() {
             try {
-                const response = await axios.get("http://localhost:5000/cowdetails");
+                const response = await axios.get("https://cattle-shop.onrender.com/cowdetails");
                 data = response.data;
     
                 const cowContainer = document.querySelector("#cow-container");
